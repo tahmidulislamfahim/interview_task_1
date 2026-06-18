@@ -1,6 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:interview_task_1/features/home/model/airport_model.dart';
-import 'package:interview_task_1/features/home/service/airport_service.dart';
+import 'package:interview_task_1/features/airport_search/model/airport_model.dart';
+import 'package:interview_task_1/features/airport_search/service/airport_service.dart';
 
 class AirportController extends GetxController {
   var airports = <Airport>[].obs;
@@ -26,7 +27,9 @@ class AirportController extends GetxController {
       airports.value = data;
       filtered.value = data;
     } catch (e) {
-      Get.snackbar("Error", e.toString());
+      if (kDebugMode) {
+        print("Error fetching airports: $e");
+      }
     } finally {
       isLoading.value = false;
     }
