@@ -28,3 +28,37 @@ String formatTime(DateTime dateTime) {
   final minuteStr = minute < 10 ? '0$minute' : '$minute';
   return "$hour:$minuteStr $period";
 }
+
+String formatDayMonthYear(DateTime dt) {
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+  final monthStr = months[dt.month - 1];
+  final yearStr = dt.year.toString().substring(2);
+  return "${dt.day} $monthStr'$yearStr";
+}
+
+String getWeekdayName(DateTime dt) {
+  const weekdays = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+  return weekdays[dt.weekday - 1];
+}
+

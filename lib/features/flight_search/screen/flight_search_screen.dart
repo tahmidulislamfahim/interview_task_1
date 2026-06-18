@@ -50,8 +50,9 @@ class FlightSearchScreen extends StatelessWidget {
       ),
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(routeTitle),
               const SizedBox(height: 2),
@@ -65,21 +66,6 @@ class FlightSearchScreen extends StatelessWidget {
               ),
             ],
           ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.share_outlined),
-              onPressed: () {
-                Get.snackbar(
-                  "Share",
-                  "Sharing flight options...",
-                  snackPosition: SnackPosition.BOTTOM,
-                  backgroundColor: AppColors.surface,
-                  colorText: AppColors.textPrimary,
-                );
-              },
-            ),
-            IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
-          ],
         ),
         body: Obx(() {
           if (controller.isLoading.value) {

@@ -7,6 +7,6 @@ void main() {
   ) async {
     await tester.pumpWidget(const App());
 
-    expect(find.text('Search Airports'), findsOneWidget);
+    expect(find.text('Flight Search'), findsOneWidget);
   });
 }
