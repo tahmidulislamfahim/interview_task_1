@@ -9,14 +9,13 @@ A Flutter flight search application built for the interview task. The app lets u
 
 ## What Is Done
 
-- Added a splash screen and main flight search flow.
 - Built an airport search screen with a dark themed flight search card.
 - Loaded airport data from a remote JSON endpoint.
 - Added searchable airport selection for departure and arrival.
 - Added airport swapping between departure and arrival.
 - Added trip type selection for one way and round way.
 - Added departure and return date selection behavior.
-- Added traveler count and cabin class selection.
+- Added traveler count and cabin class.
 - Added validation before starting a flight search.
 - Built a flight results screen.
 - Loaded flight data from a remote JSON endpoint.
