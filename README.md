@@ -1,17 +1,73 @@
-# interview_task_1
+# Flight Search App
 
-A new Flutter project.
+A Flutter flight search application built for the interview task. The app lets users select departure and arrival airports, choose trip details, and view matching flight search results.
 
-## Getting Started
+## Submission Links
 
-This project is a starting point for a Flutter application.
+- Screen recording: https://drive.google.com/file/d/1ApMJFTPNWtPv_2StJRl5VQJK_g6GXBH8/view?usp=sharing
+- APK file: https://drive.google.com/file/d/1BUG1KqXFFuH2i-ph8Dw8cXvMDYMdssmV/view?usp=drive_link
 
-A few resources to get you started if this is your first Flutter project:
+## What Is Done
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Added a splash screen and main flight search flow.
+- Built an airport search screen with a dark themed flight search card.
+- Loaded airport data from a remote JSON endpoint.
+- Added searchable airport selection for departure and arrival.
+- Added airport swapping between departure and arrival.
+- Added trip type selection for one way and round way.
+- Added departure and return date selection behavior.
+- Added traveler count and cabin class selection.
+- Added validation before starting a flight search.
+- Built a flight results screen.
+- Loaded flight data from a remote JSON endpoint.
+- Filtered flight results by selected departure and arrival airport codes.
+- Displayed best flights and other departing flights separately.
+- Added expandable flight result cards.
+- Added price insights display when available.
+- Added empty, loading, retry, and error states.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+
+- Flutter
+- Dart
+- GetX for state management and routing
+- HTTP package for API calls
+
+## Project Structure
+
+```text
+lib/
+  core/
+    common/
+    endpoints/
+  features/
+    airport_search/
+    flight_search/
+    splash/
+```
+
+## API Data
+
+The app currently reads data from remote JSON endpoints:
+
+- Airport data: configured in `lib/core/endpoints/endpoints.dart`
+- Flight search data: configured in `lib/core/endpoints/endpoints.dart`
+
+## How To Run
+
+```bash
+flutter pub get
+flutter run
+```
+
+## Build APK
+
+```bash
+flutter build apk --release
+```
+
+The generated APK will be available at:
+
+```text
+build/app/outputs/flutter-apk/app-release.apk
+```
