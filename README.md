@@ -42,7 +42,6 @@ lib/
   features/
     airport_search/
     flight_search/
-    splash/
 ```
 
 ## API Data
